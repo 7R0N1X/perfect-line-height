@@ -27,7 +27,7 @@ export const FontSizeSlider = (props: Props) => {
               onFontChange(event?.target.value as Typography)
             }
             value={fontFamily}
-            className="grow appearance-none bg-transparent row-start-1 col-start-1 border-2 border-cPrimary text-cTextPrimary p-2 font-semibold"
+            className="grow appearance-none bg-transparent row-start-1 col-start-1 border-2 border-cPrimary text-cTextPrimary px-2 py-1.5 font-semibold focus-visible:outline-0"
           >
             <option className={optionStyle} value={TYPOGRAPHY.INTER}>
               Inter
@@ -42,15 +42,15 @@ export const FontSizeSlider = (props: Props) => {
           <ChevronDown className="text-cTextPrimary absolute right-4 events-none" />
         </div>
       </div>
-      <div className="flex justify-between items-center font-semibold mb-4 text-[24px]">
+      <div className="flex justify-between items-center font-semibold mt-7 text-[24px]">
         <label>
-          <p className="text-cTextPrimary">Font Size</p>
+          <p className="max-sm:text-2xl text-cTextPrimary">Font Size</p>
         </label>
-        <p className="p-2 text-cTextPrimary border-2 border-cPrimary rounded-[4px] flex items-center justify-center w-[64px] h-[40px]">
+        <p className="px-2 py-1 text-lg text-cTextPrimary border-2 border-cPrimary rounded-[4px] flex items-center justify-center min-w-[60px]">
           {fontSize}
         </p>
       </div>
-      <div className="grid place-items-center">
+      <div className="grid place-items-center mt-[31px] sm:mt-7.5">
         <input
           type="range"
           min="8"

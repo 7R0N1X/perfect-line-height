@@ -22,7 +22,7 @@ export const StringTemplate = ({
   }
 
   return (
-    <div className="space-y-4">
+    <div className="max-sm:mt-10 h-fit sm:h-full">
       <div className="flex gap-x-2 w-fit h-fit">
         <AlignIcon
           active={modeView === MODE.LEFT}
@@ -44,7 +44,7 @@ export const StringTemplate = ({
         </AlignIcon>
       </div>
       <article
-        className="custom-lines p-6 w-full text-cTextSecondary font-semibold"
+        className="custom-lines p-6 text-cTextSecondary font-semibold mt-3 min-h-[110px] sm:min-h-full"
         style={{ fontSize: fontSize }}
       >
         <p className={`${MODE_VIEW_TO_ALIGNMENT[modeView]} font-${fontFamily}`}>

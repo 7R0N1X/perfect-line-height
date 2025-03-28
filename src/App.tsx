@@ -53,25 +53,23 @@ function App() {
 
   return (
     <>
-      <main className="flex-1 mt-50 w-full h-full flex flex-col justify-center items-center overflow-hidden">
+      <main className="px-4 mt-[204px] lg:mt-[198px] w-full min-h-full flex flex-col justify-center items-center overflow-hidden">
         <Title />
-        <section className="grid grid-cols-2 flex-1 mt-10 gap-x-24 max-w-5xl mx-auto overflow-hidden w-full">
-          <article className="w-full space-y-8">
+        <section className="grid grid-cols-1 sm:grid-cols-2 flex-1 sm:gap-10 mt-8 sm:mt-[52px]  max-w-5xl mx-auto overflow-hidden w-full">
+          <article className="w-full">
             <FontSizeSlider
               fontSize={fontSize}
               fontFamily={fontFamily}
               setFontSize={setFontSize}
               onFontChange={handleChangeTypography}
             />
-
-            <div className="flex justify-between items-center font-semibold my-4 text-[24px]">
+            <div className="flex justify-between items-center font-semibold mt-7 text-[24px]">
               <p className="text-cTextPrimary">Line Height</p>
-              <p className="p-2 text-cTextPrimary border-2 border-cPrimary rounded-[4px] flex items-center justify-center w-[64px] h-[40px]">
+              <p className="px-2 py-1 text-lg text-cTextPrimary border-2 border-cPrimary rounded-[4px] flex items-center justify-center min-w-[60px]">
                 {lineHeight.toFixed(2)}
               </p>
             </div>
-
-            <div className="flex w-full justify-center">
+            <div className="flex w-full justify-center mt-7.5">
               <Button onClick={generateCode}>Copy CSS</Button>
             </div>
           </article>
